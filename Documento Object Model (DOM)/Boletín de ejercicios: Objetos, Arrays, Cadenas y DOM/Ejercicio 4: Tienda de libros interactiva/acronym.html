@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Libros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tienda de Libros</h1>
+
+  <form id="addBookForm">
+    <input type="text" id="title" placeholder="Título" required>
+    <input type="text" id="author" placeholder="Autor" required>
+    <input type="number" id="price" placeholder="Precio" min="0" required>
+    <input type="text" id="category" placeholder="Categoría" required>
+    <button type="submit">Añadir Libro</button>
+  </form>
+
+  <div id="controls">
+    <select id="filterCategory">
+      <option value="all">Todas las categorías</option>
+    </select>
+    <button id="sortAsc">Ordenar Precio ↑</button>
+    <button id="sortDesc">Ordenar Precio ↓</button>
+  </div>
+
+  <table id="bookTable">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Precio</th>
+        <th>Categoría</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="bookstore.js"></script>
+</body>
+</html>
