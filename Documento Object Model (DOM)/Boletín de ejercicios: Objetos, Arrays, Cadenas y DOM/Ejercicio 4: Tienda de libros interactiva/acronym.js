@@ -22,24 +22,36 @@ let bookStore = {
   ],
 
   addBook(title, author, price, category) {
-    this.books.push({ title, author, price: parseFloat(price), category });
+    let exist=true;
+    bookStore.books.forEach((book)=>{
+      if(book.title.toLowerCase() === title.toLowerCase() && book.author.toLowerCase() === author.toLowerCase()){
+        exist;
+      }else{
+        !exist;
+      }
+    })
+    if(exist){
+        alert("Ya existe en la lista el libro que ha intentado añadir.");
+    }else if(!exist){
+      bookStore.books.push({ title, author, price: parseFloat(price), category });
+    }
   },
 
   removeBook(title) {
-    this.books = this.books.filter(book => book.title !== title);
+    bookStore.books = bookStore.books.filter(book => book.title !== title);
   },
 
   getBooksByCategory(category) {
-    if (category === "all") return this.books;
-    return this.books.filter(book => book.category.toLowerCase() === category.toLowerCase());
+    if (category === "all") return bookStore.books;
+    return bookStore.books.filter(book => book.category.toLowerCase() === category.toLowerCase());
   },
 
   sortBooksAsc() {
-    this.books.sort((a, b) => a.price - b.price);
+    bookStore.books.sort((a, b) => a.price - b.price);
   },
 
   sortBooksDesc() {
-    this.books.sort((a, b) => b.price - a.price);
+    bookStore.books.sort((a, b) => b.price - a.price);
   }
 };
 

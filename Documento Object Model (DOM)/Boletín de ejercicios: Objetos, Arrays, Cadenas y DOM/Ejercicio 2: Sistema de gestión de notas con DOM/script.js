@@ -24,7 +24,7 @@ let gradebook = {
   ],
 
   calculateAverage() {
-    this.students.forEach(student => {
+    gradebook.students.forEach(student => {
       if (student.grades.length > 0) {
         const sum = student.grades.reduce((acc, grade) => acc + grade, 0);
         student.average = sum / student.grades.length;
@@ -35,11 +35,11 @@ let gradebook = {
   },
 
   addStudent(name) {
-    this.students.push({ name: name, grades: [], average: 0 });
+    gradebook.students.push({ name: name, grades: [], average: 0 });
   },
 
   addGrade(studentName, grade) {
-    const student = this.students.find(s => s.name === studentName & s.grades.length<3);
+    const student = gradebook.students.find(s => s.name === studentName & s.grades.length<3);
     if (student) {
       student.grades.push(grade);
       const sum = student.grades.reduce((acc, g) => acc + g, 0);
