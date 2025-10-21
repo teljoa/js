@@ -39,11 +39,13 @@ let gradebook = {
   },
 
   addGrade(studentName, grade) {
-    const student = this.students.find(s => s.name === studentName);
+    const student = this.students.find(s => s.name === studentName & s.grades.length<3);
     if (student) {
       student.grades.push(grade);
       const sum = student.grades.reduce((acc, g) => acc + g, 0);
       student.average = sum / student.grades.length;
+    }else{
+      alert("No se puede añadir más de 3 notas por alumno.");
     }
   }
 };
