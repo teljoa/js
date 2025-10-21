@@ -22,18 +22,20 @@ let bookStore = {
   ],
 
   addBook(title, author, price, category) {
-    let exist=true;
-    bookStore.books.forEach((book)=>{
-      if(book.title.toLowerCase() === title.toLowerCase() && book.author.toLowerCase() === author.toLowerCase()){
-        exist;
-      }else{
-        !exist;
+    let exist = false;
+
+    for (let book of bookStore.books) {
+      if (book.title.toLowerCase() === title.toLowerCase() && book.author.toLowerCase() === author.toLowerCase()) {
+        exist = true;
+        break;
       }
-    })
-    if(exist){
-        alert("Ya existe en la lista el libro que ha intentado añadir.");
-    }else if(!exist){
-      bookStore.books.push({ title, author, price: parseFloat(price), category });
+    }
+
+    if (exist) {
+      alert("Ya existe en la lista el libro que has intentado añadir.");
+    } else {
+      bookStore.books.push({title,author,price: parseFloat(price),category,
+      });
     }
   },
 
