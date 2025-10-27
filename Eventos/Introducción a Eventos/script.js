@@ -1,5 +1,9 @@
 //Ejercicio 1: Eventos Básicos
-//1.1. Crea una página HTML con un botón. Agrega un escuchador de eventos para que cuando se haga clic en el botón, se muestre un mensaje en la consola del navegador.
+
+/*
+1.1. Crea una página HTML con un botón. Agrega un escuchador de eventos para que cuando se haga clic en el botón, se muestre un mensaje en la consola del 
+navegador.
+*/
 
 const btnMensaje = document.getElementById("btnMensaje");
 btnMensaje.addEventListener("click", () => {
@@ -32,7 +36,8 @@ document.body.addEventListener("mousemove", (e) => {
 /*
 Ejercicio 2: Escuchar eventos de teclado
 
-2.1 Agrega un escuchador de eventos al elemento document.body para que cuando se presione cualquier tecla, muestre un mensaje de alerta con el nombre de la tecla pulsada y su código.
+2.1 Agrega un escuchador de eventos al elemento document.body para que cuando se presione cualquier tecla, muestre un mensaje de alerta con el nombre de la 
+tecla pulsada y su código.
 
 2.2 Prueba el escuchador de eventos con diferentes teclas para verificar que muestra correctamente el nombre y el código de la tecla pulsada.
 */
@@ -45,8 +50,8 @@ document.body.addEventListener("keydown", (e) => {
 Ejercicio 3: Captura y Propagación
 
 
-3.1. Crea una lista desordenada (<ul>) con varios elementos de lista (<li>) dentro. Agrega un escuchador de eventos al elemento <ul> para que cuando se haga clic en 
-cualquier elemento de la lista, se muestre un mensaje en la consola indicando el texto del elemento clickeado.
+3.1. Crea una lista desordenada (<ul>) con varios elementos de lista (<li>) dentro. Agrega un escuchador de eventos al elemento <ul> para que cuando se haga 
+clic en cualquier elemento de la lista, se muestre un mensaje en la consola indicando el texto del elemento clickeado.
 
 3.2. Modifica el ejercicio anterior para que el mensaje en la consola muestre el nivel de jerarquía en el DOM del elemento clickeado. 
 Por ejemplo, si se hace clic en un <li>, el mensaje podría decir "Clickeaste en un elemento de nivel 2".
@@ -66,7 +71,8 @@ Ejercicio 4: Eventos de formulario
 4.1. Crea un formulario HTML con campos de entrada para el nombre y el correo electrónico. Agrega un botón "Enviar" al formulario. 
 Cuando se haga clic en el botón, valida que los campos de entrada no estén vacíos y muestra un mensaje de éxito o error en la página en función de la validación.
 
-4.2. Agrega una función que dispare un evento personalizado "formularioEnviado" cuando se envíe el formulario con éxito. Escucha este evento y muestra un mensaje personalizado en la consola cuando se dispare.
+4.2. Agrega una función que dispare un evento personalizado "formularioEnviado" cuando se envíe el formulario con éxito. Escucha este evento y muestra un 
+mensaje personalizado en la consola cuando se dispare.
 */
 
 const formulario = document.getElementById("formulario");
