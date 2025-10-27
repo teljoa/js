@@ -1,0 +1,12 @@
+Ejercicio 1: Introducción a localStorage
+
+a) ¿Qué es localStorage y cuál es su propósito en el desarrollo web? 
+
+localStorage es una API del navegador que permite almacenar datos de forma persistente (sin fecha de expiración) en el lado del cliente, es decir, 
+dentro del navegador web. Los datos permanecen incluso después de cerrar o recargar la página.
+
+b) Explica la diferencia clave entre localStorage y sessionStorage.
+
+Duración: Persiste incluso después de cerrar el navegador | Se elimina al cerrar la pestaña o el navegador
+Alcance: Disponible para todas las pestañas del mismo origen | Solo disponible para la pestaña en la que se creó
+Uso típico: Guardar preferencias o datos persistentes | Guardar datos temporales de una sesión
